@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/colorButton"
+    tools:context=".MainActivity">
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/wallpaper">
+
+        </ImageView>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
+
+        >
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_ranking"
+            android:layout_width="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="20dp"
+            android:elevation="8dp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/insignia"/>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:fontFamily="@font/fredokaone_regular"
+            android:text="Ranking"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/card_ranking"
+            android:layout_marginLeft="30dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play"
+            android:fontFamily="@font/fredokaone_regular"
+            android:layout_below="@+id/card_ranking"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lessons"
+            android:layout_below="@+id/card_lessons"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/fredokaone_regular"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="27dp"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_play"
+            app:cardCornerRadius="20dp"
+            android:elevation="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/pokeball"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_lessons"
+            app:cardCornerRadius="20dp"
+            android:elevation="8dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/pokecoin"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>
