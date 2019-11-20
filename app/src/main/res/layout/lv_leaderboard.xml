@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width = "55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/boy"
+        android:layout_marginTop = "10dp"
+        app:civ_circle_background_color="@color/colorBackgroudPicture"
+
+        />
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+            android:id="@+id/tv_nameleaderboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tony Stark"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_poinleaderboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Poin: 1769 "
+            android:fontFamily="@font/slackey_regular"
+            android:textSize="11sp"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/iv_crown"
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/crown"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

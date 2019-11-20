@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LeaderboardActivity">
+
+
+
+
+    <LinearLayout
+        android:id="@+id/lv_image"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profilepicture"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            app:civ_border_width="4dp"
+            app:civ_border_color="@color/colorBorderPicture"
+            android:src="@drawable/boy"
+            />
+
+        <RelativeLayout
+            android:id="@+id/lv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Tony Stark"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                android:id="@+id/tv_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="Newbie"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+
+                 />
+
+            <TextView
+                android:id="@+id/tv_poin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1769"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/slackey_regular"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="18dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_poin"
+                android:text="poin"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="42dp"
+                android:fontFamily="@font/slackey_regular"/>
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+    <ListView
+        android:id="@+id/lv_leaderboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lv_image"
+        tools:listitem="@layout/lv_leaderboard"/>
+
+
+
+</RelativeLayout>
