@@ -32,6 +32,9 @@ public class LeaderboardActivity extends AppCompatActivity {
     ArrayList<LeaderboardData> dataModelArrayList;
     private ListLeaderboardAdapter listAdapter;
 
+    String[] positionLeaderboard = new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+    int[] imgCrown = new int[] {R.drawable.crown, R.drawable.crown, R.drawable.crown, R.drawable.leaderboardgrey, R.drawable.leaderboardgrey, R.drawable.leaderboardgrey, R.drawable.leaderboardgrey, R.drawable.leaderboardgrey, R.drawable.leaderboardgrey, R.drawable.leaderboardgrey};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,11 +70,15 @@ public class LeaderboardActivity extends AppCompatActivity {
 
                                     playerModel.setName(dataobj.getString("name"));
                                     playerModel.setPoin(dataobj.getString("poin"));
+                                    playerModel.setPositionLeaderboard(positionLeaderboard[i]);
+                                    playerModel.setImgCrown(imgCrown[i]);
 
 
                                     dataModelArrayList.add(playerModel);
 
                                 }
+
+
 
                                 setupListview();
 

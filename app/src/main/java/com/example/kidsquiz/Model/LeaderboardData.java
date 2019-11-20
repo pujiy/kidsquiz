@@ -2,7 +2,10 @@ package com.example.kidsquiz.Model;
 
 public class LeaderboardData {
 
-    private String name, poin;
+    private String name;
+    private String poin;
+    private String positionLeaderboard;
+    private int imgCrown;
 
     public String getName() {
         return name;
@@ -20,5 +23,19 @@ public class LeaderboardData {
         this.poin = poin;
     }
 
-    
+    public String getPositionLeaderboard() {
+        return positionLeaderboard;
+    }
+
+    public void setPositionLeaderboard(String positionLeaderboard) {
+        this.positionLeaderboard = positionLeaderboard;
+    }
+
+    public int getImgCrown() {
+        return imgCrown;
+    }
+
+    public void setImgCrown(int imgCrown) {
+        this.imgCrown = imgCrown;
+    }
 }

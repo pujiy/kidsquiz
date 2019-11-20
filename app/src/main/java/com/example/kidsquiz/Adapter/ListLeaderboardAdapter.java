@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,9 +20,12 @@ public class ListLeaderboardAdapter extends BaseAdapter {
     private Context context;
     private ArrayList<LeaderboardData> leaderboardDataArrayList;
 
+
+
     public ListLeaderboardAdapter(Context context, ArrayList<LeaderboardData> leaderboardDataArrayList) {
         this.context = context;
         this.leaderboardDataArrayList = leaderboardDataArrayList;
+
     }
 
     @Override
@@ -54,13 +58,18 @@ public class ListLeaderboardAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         Viewholder holder;
 
+
         if (convertView == null) {
             holder = new Viewholder();
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.lv_leaderboard, null, true);
 
+
+
             holder.tvName = convertView.findViewById(R.id.tv_nameleaderboard);
             holder.tvPoin = convertView.findViewById(R.id.tv_poinleaderboard);
+            holder.tvPositionLeaderboard = convertView.findViewById(R.id.tv_position);
+            holder.ivCrown = convertView.findViewById(R.id.iv_crown);
 
             convertView.setTag(holder);
         }
@@ -70,13 +79,20 @@ public class ListLeaderboardAdapter extends BaseAdapter {
             holder = (Viewholder) convertView.getTag();
         }
 
+        LeaderboardData currentLeaderboardData = (LeaderboardData) getItem(position);
+        ;
+
         holder.tvName.setText(leaderboardDataArrayList.get(position).getName());
         holder.tvPoin.setText(leaderboardDataArrayList.get(position).getPoin());
+        holder.tvPositionLeaderboard.setText(currentLeaderboardData.getPositionLeaderboard());
+        holder.ivCrown.setImageResource(currentLeaderboardData.getImgCrown());
+
 
         return convertView;
     }
 
     private class Viewholder {
-        protected TextView tvName, tvPoin;
+        protected TextView tvName, tvPoin, tvPositionLeaderboard;
+        protected ImageView ivCrown;
     }
 }

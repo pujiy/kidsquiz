@@ -42,7 +42,8 @@
                 android:textStyle="bold"
                 android:text="Tony Stark"
                 android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp" />
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/poppins_medium"/>
 
             <TextView
                 android:id="@+id/tv_badge"
@@ -53,6 +54,7 @@
                 android:text="Newbie"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="50dp"
+                android:fontFamily="@font/prompt_medium"
 
                  />
 
