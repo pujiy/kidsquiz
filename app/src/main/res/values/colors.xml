@@ -6,5 +6,7 @@
     <color name="colorButton">#ffbf00</color>
     <color name="colorBorderPicture">#F77C1F</color>
     <color name="colorBackgroudPicture">#FFFFFF</color>
+    <color name="colorLeaderboardUser">#E6FFC107</color>
+    <color name="colorLeaderboardAllUser">#FB8C00</color>
 
 </resources>

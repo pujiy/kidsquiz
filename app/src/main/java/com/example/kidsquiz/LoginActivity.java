@@ -26,13 +26,25 @@ public class LoginActivity extends AppCompatActivity {
     ProgressBar progressBar;
 
     @Override
+    public void onBackPressed() {
+        editTextUsername.setError("Please enter your username");
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
+
+
+
+
+
+
         if (SharedPrefmanager.getInstance(this).isLoggedIn()) {
             finish();
-            startActivity(new Intent(this, ProfileActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
         }
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar);

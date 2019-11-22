@@ -9,6 +9,7 @@ import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -19,6 +20,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.kidsquiz.Adapter.ListLeaderboardAdapter;
 import com.example.kidsquiz.Model.LeaderboardData;
+import com.example.kidsquiz.Model.User;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -41,6 +43,10 @@ public class LeaderboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_leaderboard);
         
         listView = findViewById(R.id.lv_leaderboard);
+        User user = SharedPrefmanager.getInstance(this).getUser();
+
+        TextView tvUsername = findViewById(R.id.tv_name);
+        tvUsername.setText(user.getName());
 
         
         retrieveJson();

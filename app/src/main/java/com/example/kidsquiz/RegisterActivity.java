@@ -26,9 +26,17 @@ public class RegisterActivity extends AppCompatActivity {
     ProgressBar progressBar;
 
     @Override
+    public void onBackPressed() {
+        startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+        return;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+
 
         progressBar = findViewById(R.id.progressBar);
 
@@ -36,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         if(SharedPrefmanager.getInstance(this).isLoggedIn()) {
             finish();
-            startActivity(new Intent(this, ProfileActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
             return;
         }
 
@@ -130,7 +138,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                                 //starting the profile activity
                                 finish();
-                                startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
 
                             } else {
                                 Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
