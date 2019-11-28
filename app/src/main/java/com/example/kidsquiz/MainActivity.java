@@ -1,5 +1,6 @@
 package com.example.kidsquiz;
 
+import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,16 +10,22 @@ import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.kidsquiz.Model.User;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         User user = SharedPrefmanager.getInstance(this).getUser();
 
@@ -33,6 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         CircleImageView ivProfile = findViewById(R.id.iv_imguser);
         ivProfile.setOnClickListener(this);
+
+
     }
 
 

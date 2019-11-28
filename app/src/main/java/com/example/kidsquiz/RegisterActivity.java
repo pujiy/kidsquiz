@@ -23,7 +23,10 @@ public class RegisterActivity extends AppCompatActivity {
 
     EditText editTextUsername, editTextEmail, editTextPassword;
     RadioGroup radioGroupGender;
+    RadioButton rbMale, rbFemale;
     ProgressBar progressBar;
+    String imgurl = "";
+
 
     @Override
     public void onBackPressed() {
@@ -38,6 +41,13 @@ public class RegisterActivity extends AppCompatActivity {
 
 
 
+        editTextUsername = findViewById(R.id.editTextName);
+        editTextEmail = findViewById(R.id.editTextEmail);
+        editTextPassword = findViewById(R.id.editTextPassword);
+        rbFemale = findViewById(R.id.radioButtonFemale);
+        radioGroupGender = findViewById(R.id.radioGender);
+        rbMale = findViewById(R.id.radioButtonMale);
+        rbFemale = findViewById(R.id.radioButtonFemale);
         progressBar = findViewById(R.id.progressBar);
 
         //if the user is already logged in we will directly start the profile activity
@@ -48,17 +58,23 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
-        editTextUsername = findViewById(R.id.editTextName);
-        editTextEmail = findViewById(R.id.editTextEmail);
-        editTextPassword = findViewById(R.id.editTextPassword);
+        if(rbMale.isChecked()) {
+            imgurl = "Boy";
+        }
 
-        radioGroupGender = findViewById(R.id.radioGender);
+        if (rbFemale.isChecked()) {
+            imgurl = "Girl";
+        }
+
+
 
         findViewById(R.id.buttonRegister).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                registerUser();
+
+
+                registerUser(imgurl);
             }
         });
 
@@ -73,14 +89,16 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
-    private void registerUser() {
+    private void registerUser(String imgurlprofile) {
         final String username = editTextUsername.getText().toString().trim();
         final String email = editTextEmail.getText().toString().trim();
         final String password = editTextPassword.getText().toString().trim();
-
+        final String imgurluser = imgurlprofile;
         final String gender =((RadioButton) findViewById(radioGroupGender.getCheckedRadioButtonId())).getText().toString();
 
         //first we will do the validations
+
+
 
         if(TextUtils.isEmpty(username)) {
             editTextUsername.setError("Please enter username");
@@ -106,6 +124,8 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
+
+
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URLs.URL_REGISTER,
                 new Response.Listener<String>() {
                     @Override
@@ -130,7 +150,9 @@ public class RegisterActivity extends AppCompatActivity {
                                         userJson.getInt("id"),
                                         userJson.getString("name"),
                                         userJson.getString("email"),
-                                        userJson.getString("gender")
+                                        userJson.getString("gender"),
+                                        userJson.getString("imgurl")
+
                                 );
 
                                 //storing the user in shared preferences
@@ -163,6 +185,7 @@ public class RegisterActivity extends AppCompatActivity {
                 params.put("email", email);
                 params.put("password", password);
                 params.put("gender", gender);
+                params.put("imgurl", imgurluser);
 
 
                 return params;

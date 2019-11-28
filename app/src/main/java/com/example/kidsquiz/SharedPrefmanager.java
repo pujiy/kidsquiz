@@ -11,6 +11,7 @@ public class SharedPrefmanager {
     private static final String KEY_EMAIL = "keyemail";
     private static final String KEY_GENDER = "keygender";
     private static final String KEY_ID = "keyid";
+    private static final String KEY_IMGURL = "imgurl" ;
 
     private static SharedPrefmanager mInstance;
     private static Context mCtx;
@@ -36,6 +37,7 @@ public class SharedPrefmanager {
         editor.putString(KEY_NAME, user.getName());
         editor.putString(KEY_EMAIL, user.getEmail());
         editor.putString(KEY_GENDER, user.getGender());
+        editor.putString(KEY_IMGURL, user.getImgurl());
         editor.apply();
     }
 
@@ -51,7 +53,8 @@ public class SharedPrefmanager {
                 sharedPreferences.getInt(KEY_ID, -1),
                 sharedPreferences.getString(KEY_NAME, null),
                 sharedPreferences.getString(KEY_EMAIL, null),
-                sharedPreferences.getString(KEY_GENDER, null)
+                sharedPreferences.getString(KEY_GENDER, null),
+                sharedPreferences.getString(KEY_IMGURL, null)
         );
     }
 

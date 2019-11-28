@@ -1,15 +1,24 @@
 package com.example.kidsquiz;
 
+import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.kidsquiz.Model.User;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProfileActivity extends AppCompatActivity {
 
     TextView textViewId, textViewUsername, textViewEmail, textViewGender;
+    CircleImageView ivProfile;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +38,8 @@ public class ProfileActivity extends AppCompatActivity {
         textViewUsername = (TextView) findViewById(R.id.textViewUsername);
         textViewEmail = (TextView) findViewById(R.id.textViewEmail);
         textViewGender = (TextView) findViewById(R.id.textViewGender);
+        ivProfile = findViewById(R.id.iv_imguser);
+
 
 
         //getting the current user
@@ -39,6 +50,8 @@ public class ProfileActivity extends AppCompatActivity {
         textViewUsername.setText(user.getName());
         textViewEmail.setText(user.getEmail());
         textViewGender.setText(user.getGender());
+
+
 
         //when the user presses logout button
         //calling the logout method
