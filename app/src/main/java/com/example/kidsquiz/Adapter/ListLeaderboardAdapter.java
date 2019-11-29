@@ -83,7 +83,7 @@ public class ListLeaderboardAdapter extends BaseAdapter {
         ;
 
         holder.tvName.setText(leaderboardDataArrayList.get(position).getName());
-        holder.tvPoin.setText(leaderboardDataArrayList.get(position).getPoin());
+        holder.tvPoin.setText("Poin : "+leaderboardDataArrayList.get(position).getPoin());
         holder.tvPositionLeaderboard.setText(currentLeaderboardData.getPositionLeaderboard());
         holder.ivCrown.setImageResource(currentLeaderboardData.getImgCrown());
 

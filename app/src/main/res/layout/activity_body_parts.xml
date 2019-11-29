@@ -5,21 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@android:color/white"
-    tools:context=".LessonActivity">
+    android:background="#E0E0E0"
+    tools:context=".BodyPartsActivity">
 
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <ImageView
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/animalsicon"
-            android:layout_centerHorizontal="true"/>
-
-
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:src="@drawable/bodyicon"/>
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/pager"
             android:layout_centerVertical="true"
@@ -38,9 +39,11 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/animalspeopleicon"
+            android:layout_below="@+id/indicator"
+            android:src="@drawable/bodybottomicon"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"/>
 
     </RelativeLayout>
+
 </LinearLayout>

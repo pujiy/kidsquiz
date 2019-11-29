@@ -9,27 +9,24 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
-import com.example.kidsquiz.LessonActivity;
+
 import com.example.kidsquiz.R;
 
 import java.util.ArrayList;
 
-public class LessonAdapter extends PagerAdapter {
+public class BodyPartsAdapter extends PagerAdapter {
 
-    private ArrayList<Integer> lessonAnimals;
+    private ArrayList<Integer> lessonBodyParts;
     private LayoutInflater inflater;
     private Context context;
 
-    public LessonAdapter(Context context, ArrayList<Integer> lessonAnimals) {
+    public BodyPartsAdapter(Context context, ArrayList<Integer> lessonAnimals) {
         this.context = context;
-        this.lessonAnimals = lessonAnimals;
+        this.lessonBodyParts = lessonAnimals;
         inflater = LayoutInflater.from(context);
 
 
     }
-
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
@@ -38,23 +35,15 @@ public class LessonAdapter extends PagerAdapter {
 
     @Override
     public int getCount() {
-        return lessonAnimals.size();
+        return lessonBodyParts.size();
     }
-
 
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup view, int position) {
-        View myImageLayout  = inflater.inflate(R.layout.lessonslider, view, false);
-        ImageView myImage = (ImageView) myImageLayout.findViewById(R.id.imglesson);
-
-
-        Glide.with(context)
-                .load(lessonAnimals.get(position))
-                .override(500, 400)
-                .fitCenter()
-                .into(myImage);
-
+        View myImageLayout  = inflater.inflate(R.layout.bodyparts_slider, view, false);
+        ImageView myImage = (ImageView) myImageLayout.findViewById(R.id.imgbodyparts);
+        myImage.setImageResource(lessonBodyParts.get(position));
         view.addView(myImageLayout, 0);
         return myImageLayout;
     }
@@ -63,6 +52,4 @@ public class LessonAdapter extends PagerAdapter {
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
         return view.equals(object);
     }
-
-
 }

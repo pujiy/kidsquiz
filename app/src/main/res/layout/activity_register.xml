@@ -5,7 +5,21 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".RegisterActivity">
+        tools:context=".RegisterActivity"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/particle"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/particle"/>
     
     <LinearLayout
             android:layout_width="match_parent"
@@ -16,29 +30,47 @@
 
             <EditText
                     android:id="@+id/editTextName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
+                android:layout_gravity="center"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
                     android:hint="Name"
-                    android:inputType="text" />
+                android:fontFamily="@font/adventpro_regular"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                    android:inputType="text"
+                android:background="@drawable/rectanglesinglecolumn"
+                android:textAlignment="center"/>
 
             <EditText
                     android:id="@+id/editTextEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
+                android:layout_gravity="center"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
-                    android:hint="Email"
-                    android:inputType="textEmailAddress" />
+                    android:hint="Username"
+                    android:inputType="text"
+                android:fontFamily="@font/adventpro_regular"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textAlignment="center"
+                android:background="@drawable/rectanglesinglecolumn"/>
 
             <EditText
                     android:id="@+id/editTextPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
+                android:layout_gravity="center"
                     android:hint="Password"
+                android:textColorHint="@android:color/white"
+                android:fontFamily="@font/adventpro_regular"
+                android:background="@drawable/rectanglesinglecolumn"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
                     android:inputType="textPassword" />
 
             <RadioGroup
@@ -47,17 +79,25 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
                 <RadioButton
                         android:id="@+id/radioButtonMale"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checked="true"
-                        android:text="Male" />
-
+                        android:text="Male"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/adventpro_regular"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"/>
                 <RadioButton
                         android:id="@+id/radioButtonFemale"
+                    android:fontFamily="@font/adventpro_regular"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:checked="false"
+                    android:layout_gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Female" />
@@ -66,11 +106,12 @@
 
     <Button
             android:id="@+id/buttonRegister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+        android:layout_gravity="center"
+            android:layout_height="60dp"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:text="Register" />
+        android:background="@drawable/registerbutton"/>
 
     <TextView
             android:id="@+id/textViewLogin"
@@ -78,7 +119,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Already Registered?\n Login Here"
+            android:text=""
             android:textAlignment="center"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
     </LinearLayout>

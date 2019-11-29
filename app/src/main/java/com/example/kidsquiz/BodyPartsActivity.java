@@ -6,33 +6,34 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.kidsquiz.Adapter.LessonAdapter;
+import com.example.kidsquiz.Adapter.BodyPartsAdapter;
 
 import java.util.ArrayList;
 
 import me.relex.circleindicator.CircleIndicator;
 
-public class LessonActivity extends AppCompatActivity {
+public class BodyPartsActivity extends AppCompatActivity {
 
     private static ViewPager mPager;
     private static int currentPage = 0;
-    private static final Integer[] img = {R.drawable.bird, R.drawable.cat, R.drawable.cow, R.drawable.dog, R.drawable.elephant, R.drawable.frog, R.drawable.monkey, R.drawable.panda, R.drawable.rabbit, R.drawable.fish};
-    private ArrayList<Integer> lessonAnimalsData = new ArrayList<Integer>();
+    private static final Integer[] img = {R.drawable.ear, R.drawable.finger, R.drawable.foot, R.drawable.hair, R.drawable.hand, R.drawable.mouth, R.drawable.nose,R.drawable.eye, R.drawable.teeth, R.drawable.thumb };
+    private ArrayList<Integer> lessonBodyPartsData = new ArrayList<Integer>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lesson);
+        setContentView(R.layout.activity_body_parts);
 
         init();
     }
 
     private void init() {
+
         for (int i=0; i<img.length; i++)
-            lessonAnimalsData.add(img[i]);
+            lessonBodyPartsData.add(img[i]);
 
         mPager = (ViewPager) findViewById(R.id.pager);
-        mPager.setAdapter(new LessonAdapter(LessonActivity.this, lessonAnimalsData));
+        mPager.setAdapter(new BodyPartsAdapter(BodyPartsActivity.this, lessonBodyPartsData));
         CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
         indicator.setViewPager(mPager);
 
@@ -46,7 +47,6 @@ public class LessonActivity extends AppCompatActivity {
                 mPager.setCurrentItem(currentPage++, true);
             }
         };
-
 
     }
 }

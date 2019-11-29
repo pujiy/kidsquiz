@@ -29,6 +29,9 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
         CardView catAnimals = findViewById(R.id.catAnimals);
         catAnimals.setOnClickListener(this);
 
+        CardView catBodyParts = findViewById(R.id.catBodyParts);
+        catBodyParts.setOnClickListener(this);
+
     }
 
 
@@ -38,6 +41,11 @@ public class CategoryActivity extends AppCompatActivity implements View.OnClickL
             case R.id.catAnimals:
                 Intent moveLessonsAnimals = new Intent(CategoryActivity.this, LessonActivity.class);
                 startActivity(moveLessonsAnimals);
+                break;
+
+            case R.id.catBodyParts:
+                Intent moveLessonsBodyParts = new Intent (CategoryActivity.this, BodyPartsActivity.class);
+                startActivity(moveLessonsBodyParts);
                 break;
         }
     }
