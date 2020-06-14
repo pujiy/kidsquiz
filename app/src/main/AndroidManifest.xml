@@ -1,25 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.kidsquiz">
+    package="com.nuraffchaniago.kidsquiz">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:name=".MyApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_logo_kidz"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_logo_kidz"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BodyPartsActivity"></activity>
-        <activity android:name=".LeaderboardActivity" />
+        <activity android:name=".LessonShapesActivity"></activity>
+        <activity android:name=".LessonNumbersActivity" />
+        <activity android:name=".LessonMusicsActivity" />
+        <activity android:name=".LessonMonthActivity" />
+        <activity android:name=".LessonLettersActivity" />
+        <activity android:name=".QuizWordActivity" />
+        <activity android:name=".CategoryQuizActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".ScoreActivity" />
+        <activity android:name=".LessonsFruitsActivity" />
+        <activity
+            android:name=".FinishQuizActivity"
+            android:label="@string/title_activity_finish_quiz"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".CategoryActivity" />
+        <activity android:name=".QuizActivity" />
+        <activity android:name=".BodyPartsActivity" />
+        <activity android:name=".LeaderboardActivity" />
+        <activity android:name=".ColorActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LessonActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".GetStartedActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

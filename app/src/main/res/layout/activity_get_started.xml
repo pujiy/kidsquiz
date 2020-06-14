@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GetStartedActivity">
+
+
+    <ImageView
+        android:id="@+id/iv_box"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/asset_get_started_box"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:text="KID LEARNS"
+        android:fontFamily="@font/amaticsc_bold"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/iv_box"/>
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detail_get_started"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/adventpro_regular"/>
+
+    <Button
+        android:id="@+id/btn_get_started"
+        android:layout_width="190dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/detail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="Get Started"
+        android:textColor="@android:color/white"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="190dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/btn_get_started"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:text="Login"
+        android:textColor="@android:color/black"/>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/asset_get_started_kids"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

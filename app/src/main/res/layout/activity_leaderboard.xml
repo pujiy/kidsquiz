@@ -4,28 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackgroundMain"
     tools:context=".LeaderboardActivity">
 
-
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/partikel"/>
 
 
     <LinearLayout
         android:id="@+id/lv_image"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_margin="20dp"
+        android:layout_height="90dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal"
         >
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iv_profilepicture"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center"
-            app:civ_border_width="4dp"
-            app:civ_border_color="@color/colorBorderPicture"
-            android:src="@drawable/boy"
-            />
+
 
         <RelativeLayout
             android:id="@+id/lv_name"
@@ -40,10 +39,13 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:textColor="@android:color/white"
                 android:text="Tony Stark"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"
+                android:background="@color/colorBackgroundMain"
                 android:fontFamily="@font/poppins_medium"/>
+
 
             <TextView
                 android:id="@+id/tv_badge"
@@ -52,6 +54,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:text="Newbie"
+                android:visibility="gone"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="50dp"
                 android:fontFamily="@font/prompt_medium"
@@ -62,14 +65,15 @@
                 android:id="@+id/tv_poin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
+                android:text="2310"
                 android:textAlignment="center"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:fontFamily="@font/slackey_regular"
                 android:layout_marginTop="18dp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="42dp"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="10dp"
                 />
 
 
@@ -77,9 +81,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_poin"
-                android:text="poin"
+                android:text="TotalScore"
+                android:textColor="@android:color/white"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="42dp"
+                android:layout_marginEnd="10dp"
                 android:fontFamily="@font/slackey_regular"/>
 
         </RelativeLayout>
@@ -87,15 +92,43 @@
 
 
 
+
     </LinearLayout>
 
+    <Button
+        android:id="@+id/btn_profile"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="Profile"
+        android:background="@android:color/white"
+        android:layout_below="@+id/lv_image"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_leaderboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leaderboard"
+        android:textSize="20sp"
+        android:layout_below="@+id/lv_image"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/slackey_regular"
+        android:background="@color/colorBackgroundMain"
+        android:textStyle="bold"/>
 
 
     <ListView
         android:id="@+id/lv_leaderboard"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/lv_image"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/tv_leaderboard"
         tools:listitem="@layout/lv_leaderboard"/>
 
 

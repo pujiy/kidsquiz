@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="100dp"
     android:layout_marginBottom="10dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:orientation="horizontal"
+    android:background="@android:color/white"
 
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/iv_crown"
 
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/crown"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
 
     <TextView
         android:id="@+id/tv_position"
@@ -16,70 +28,37 @@
         android:layout_marginRight="30dp"
         android:layout_marginLeft="10dp"
         android:textStyle="bold"
-        android:textSize="18sp"
+        android:textSize="24sp"
+        android:visibility="gone"
+        android:textColor="@android:color/black"
         />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width = "55dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/boy"
-        android:layout_marginTop = "10dp"
-        app:civ_circle_background_color="@color/colorBackgroudPicture"
-
-        />
-    
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="15dp"
-        android:orientation="vertical"
-
-        >
 
         <TextView
             android:id="@+id/tv_nameleaderboard"
-            android:layout_width="wrap_content"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:text="Tony Stark"
             android:textStyle="bold"
+            android:textColor="@android:color/black"
             android:fontFamily="@font/poppins_medium"
-            android:textSize="14sp"/>
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="10dp"
+            android:textSize="20sp"/>
 
         <TextView
             android:id="@+id/tv_poinleaderboard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Poin: 1769 "
+            android:text="1890 "
+            android:textColor="@android:color/black"
             android:fontFamily="@font/slackey_regular"
-            android:textSize="11sp"/>
+            android:textSize="18sp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="18dp" />
 
 
 
 
     </LinearLayout>
 
-
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-
-        <ImageView
-            android:id="@+id/iv_crown"
-
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/crown"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"/>
-
-
-    </RelativeLayout>
-
-
-
-
-</LinearLayout>

@@ -5,8 +5,13 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAFAFA">
+    android:background="#f8a92e">
 
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/cat_titile" />
 
     <GridLayout
         android:layout_width="match_parent"
@@ -26,7 +31,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="12dp"
-            app:cardCornerRadius="30dp"
+            app:cardCornerRadius="15dp"
             app:cardElevation="6dp">
 
             <LinearLayout
@@ -64,7 +69,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="12dp"
-            app:cardCornerRadius="30dp"
+            app:cardCornerRadius="15dp"
             app:cardElevation="6dp">
 
             <LinearLayout
@@ -101,7 +106,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="12dp"
-            app:cardCornerRadius="30dp"
+            app:cardCornerRadius="15dp"
             app:cardElevation="6dp">
 
             <LinearLayout
@@ -114,7 +119,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/colors" />
+                    android:src="@drawable/catcolors" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -138,7 +143,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="12dp"
-            app:cardCornerRadius="30dp"
+            app:cardCornerRadius="15dp"
             app:cardElevation="6dp">
 
             <LinearLayout
@@ -151,7 +156,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/fruits" />
+                    android:src="@drawable/catfruits" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -176,7 +181,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="12dp"
-            app:cardCornerRadius="30dp"
+            app:cardCornerRadius="15dp"
             app:cardElevation="6dp">
 
             <LinearLayout
@@ -213,7 +218,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="12dp"
-            app:cardCornerRadius="30dp"
+            app:cardCornerRadius="15dp"
             app:cardElevation="6dp">
 
             <LinearLayout
@@ -250,7 +255,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="12dp"
-            app:cardCornerRadius="30dp"
+            app:cardCornerRadius="15dp"
             app:cardElevation="6dp">
 
             <LinearLayout
@@ -263,7 +268,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/girl" />
+                    android:src="@drawable/catmusics" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -288,7 +293,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="12dp"
-            app:cardCornerRadius="30dp"
+            app:cardCornerRadius="15dp"
             app:cardElevation="6dp">
 
             <LinearLayout
@@ -301,7 +306,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/numbers" />
+                    android:src="@drawable/catnumbers" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -325,7 +330,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="12dp"
-            app:cardCornerRadius="30dp"
+            app:cardCornerRadius="15dp"
             app:cardElevation="6dp">
 
             <LinearLayout
@@ -338,7 +343,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/home" />
+                    android:src="@drawable/catshapes" />
 
                 <TextView
                     android:layout_width="wrap_content"

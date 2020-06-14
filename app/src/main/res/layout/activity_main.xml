@@ -5,49 +5,66 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="@color/colorButton"
+    android:background="#bf1931"
     tools:context=".MainActivity">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/partikel"/>
+
+        <ImageView
+            android:id="@+id/iv_k"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/kidslogo"/>
+
+
+        <ImageView
+            android:id="@+id/iv_q"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/q"
+            android:layout_toRightOf="@+id/iv_k"
+            android:layout_marginTop="50dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_q"
+            android:textSize="40sp"
+            android:fontFamily="@font/amaticsc_bold"
+            android:text="uizzy"
+            android:layout_marginTop="80dp"
+            android:textColor="@android:color/white"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/iconplaystore"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/iv_q" />
+    </RelativeLayout>
+
+
 
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
-        >
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iv_imguser"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:src="@drawable/boy"
-            app:civ_circle_background_color="@android:color/white"/>
-
-        <TextView
-            android:id="@+id/tv_user"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="10dp"
-            android:text="Tony Stark"
-            android:textSize="16sp"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
-            android:fontFamily="@font/poppins_medium"
-            android:layout_toRightOf="@+id/iv_imguser"/>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="350dp"
-
+        android:layout_marginTop="10dp"
         >
 
 
@@ -56,58 +73,38 @@
             android:id="@+id/card_ranking"
             android:layout_width="100dp"
             android:layout_marginLeft="20dp"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             app:cardCornerRadius="20dp"
             android:elevation="8dp"
             >
 
-            <ImageView
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_margin="5dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/insignia"/>
+                android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_ranking"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="60dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/img_ranking"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/fredokaone_regular"
+                android:text="Ranking"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/iv_ranking"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
 
 
-
+            </RelativeLayout>
         </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:fontFamily="@font/fredokaone_regular"
-            android:text="Ranking"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/card_ranking"
-            android:layout_marginLeft="30dp"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Play"
-            android:fontFamily="@font/fredokaone_regular"
-            android:layout_below="@+id/card_ranking"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:textColor="@android:color/white"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Lessons"
-            android:layout_below="@+id/card_lessons"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:fontFamily="@font/fredokaone_regular"
-
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="27dp"/>
 
 
         <androidx.cardview.widget.CardView
@@ -116,16 +113,32 @@
             android:elevation="8dp"
             android:layout_centerHorizontal="true"
             android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
 
             >
 
-            <ImageView
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_margin="5dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/pokeball"/>
+                android:layout_height="match_parent">
 
+            <ImageView
+                android:id="@+id/iv_play"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/img_play"/>
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:fontFamily="@font/fredokaone_regular"
+                 android:text="Play"
+                 android:layout_centerHorizontal="true"
+                 android:layout_below="@+id/iv_play"
+                 android:textSize="20sp"
+                 android:layout_marginTop="10dp"/>
+
+            </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
 
@@ -140,24 +153,62 @@
             android:layout_marginLeft="20dp"
             android:layout_alignParentEnd="true"
             android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
 
             >
 
-            <ImageView
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_margin="5dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/pokecoin"/>
+                android:layout_height="match_parent">
 
+            <ImageView
+                android:id="@+id/iv_lessons"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/img_lessons"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lessons"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                android:fontFamily="@font/fredokaone_regular"
+                android:layout_below="@+id/iv_lessons"
+                android:layout_marginTop="10dp"/>
+
+
+            </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
 
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/partikel"/>
+
+        <Button
+            android:id="@+id/btn_volume"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_volume_up_white_50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="20dp"/>
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="90dp"
+            android:src="@drawable/partikel"/>
+
 
 
     </RelativeLayout>
 
-    </RelativeLayout>
 
 
 

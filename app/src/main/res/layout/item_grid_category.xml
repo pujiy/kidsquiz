@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_margin="5dp"
         android:layout_height="55dp"
-        android:src="@drawable/pokecoin"/>
+        android:src="@drawable/img_lessons"/>
 
         <TextView
             android:id="@+id/tvCat"

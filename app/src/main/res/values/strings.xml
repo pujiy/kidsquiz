@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Kids Quiz</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_finish_quiz">FinishQuizActivity</string>
+    <string name="detail_get_started">English-Class education for kids, anywhere</string>
+
 
 </resources>
